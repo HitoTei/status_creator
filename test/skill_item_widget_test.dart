@@ -6,7 +6,7 @@ import 'package:statuscreator/skills/skill_item/skill_item_widget.dart';
 void main(){
   testWidgets('skill item widget test', (WidgetTester tester) async{
     await tester.pumpWidget(MaterialApp(
-        home: SkillItemWidget('hogehoge',10)
+        home: SkillItemWidget(skillName: 'hogehoge',point: 10)
     ));
     
     expect(find.text('hogehoge'),findsOneWidget);

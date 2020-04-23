@@ -5,7 +5,7 @@ import 'package:statuscreator/skills/skill_item/skill_item_store.dart';
 
 class SkillItemWidget extends StatelessWidget{
 
-  SkillItemWidget(String skillName,int point)
+  SkillItemWidget({@required String skillName,@required int point})
       :this._skillName = skillName, this._point = point;
 
   final String _skillName;
