@@ -12,7 +12,7 @@ class StatusWidget extends StatelessWidget{
     ];
 
     return Container(
-      child: ListView(
+      child: Column(
         children: <Widget>[
           ValueListenableProvider<int>(
             create:(_) => statusSumPoint,

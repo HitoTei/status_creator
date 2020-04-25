@@ -3,8 +3,9 @@ import 'package:provider/provider.dart';
 import 'status_item_store.dart';
 
 class StatusItemWidget extends StatelessWidget{
-  final String _title;
+
   StatusItemWidget(String title): this._title = title;
+  final String _title;
 
   @override
   Widget build(BuildContext context) {

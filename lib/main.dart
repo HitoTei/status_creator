@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:statuscreator/skills/skills_widget.dart';
 import 'status/status_widget.dart';
 
 void main() => runApp(MyApp());
@@ -11,9 +12,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: Scaffold(
-        body: StatusWidget()
+        body: ListView(
+          children: <Widget>[
+            Card(child:StatusWidget()),
+            Card(child:SkillsWidget()),
+          ],
+        )
       ),
+
     );
   }
 }
