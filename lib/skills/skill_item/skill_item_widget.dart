@@ -13,14 +13,18 @@ class SkillItemWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Row(
-        children: <Widget>[
-          Text(_skillName),
-          Text('point: $_point'),
-          _selectWidget()
-        ],
-      ),
+    return Row(
+      children: <Widget>[
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minWidth: 150,
+            maxWidth: 150,
+          ),
+          child: Text(_skillName,),
+        ),
+        _selectWidget(),
+        Text('${_point}p')
+      ],
     );
   }
 

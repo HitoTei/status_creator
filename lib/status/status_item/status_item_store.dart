@@ -14,12 +14,23 @@ class StatusItemStore with ChangeNotifier{
 
     notifyListeners();
   }
+  void addAllPoint(){
+    point += statusSumPoint.value;
+    statusSumPoint.value = 0;
+    notifyListeners();
+  }
 
   void subPoint(){
     if(point <= 0)return;
 
     statusSumPoint.value++;
     point--;
+
+    notifyListeners();
+  }
+  void subAllPoint(){
+    statusSumPoint.value += point;
+    point = 0;
 
     notifyListeners();
   }
