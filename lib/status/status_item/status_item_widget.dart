@@ -42,11 +42,14 @@ class _ValueWidget extends StatelessWidget{
       builder: (BuildContext context,StatusItemStore value, Widget child) {
         return Row(
           children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_drop_up),
-              onPressed: value.addPoint,
+            Container(
+              padding: EdgeInsets.all(5),
+              child: InkWell(
+                onTap: value.addPoint,
+                onLongPress: value.addAllPoint,
+                child: const Icon(Icons.arrow_drop_up),
+              ),
             ),
-
 
             ConstrainedBox(
               constraints: BoxConstraints(
@@ -56,11 +59,11 @@ class _ValueWidget extends StatelessWidget{
               child: Text(value.point.toString()),
             ),
 
-            IconButton(
-              icon: const Icon(Icons.arrow_drop_down),
-              onPressed: value.subPoint,
-
-            )
+            InkWell(
+              onTap: value.subPoint,
+              onLongPress: value.subAllPoint,
+              child: Icon(Icons.arrow_drop_down),
+            ),
 
           ]
         );
